@@ -9,9 +9,7 @@
 
   <WebinarCard />
 </main>
-
 <style>
   main{
     display: flex;
-  }
-</style>
+ 
