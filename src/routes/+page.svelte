@@ -1,6 +1,6 @@
 <script>
   import WebinarCard from "../lib/webinar-card.svelte";
-  export let data;
+  export let data; 
 </script>
 
 <main>
