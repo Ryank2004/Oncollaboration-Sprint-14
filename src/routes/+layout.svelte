@@ -27,7 +27,9 @@
     </ul>
 </nav>
 
-<slot />
+<div class="slot">
+    <slot />
+</div>
 
 <style>
     nav {
@@ -64,4 +66,65 @@
         height: 24px;
     }
 
+@media (min-width: 600px) {
+    li a {
+        font-size: 16px;
+    }
+
+    .icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (min-width: 1080px) {
+
+    .slot {
+      margin-top: 64px;
+    }
+
+    nav {
+        bottom: auto;
+        top: 0;
+        box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.3);
+        padding: 0;
+    }
+
+    ul {
+        justify-content: right;
+    }
+
+    li a {
+        flex-direction: row-reverse;
+        font-size: 16px;
+        padding: 1em .5em 1em;
+        margin-right: 1.5em;
+        font-weight: 700;
+    }
+
+    li a.active {
+        padding-top: 1em;
+        border-bottom: 3px solid rgba(106, 0, 37, 1);
+        padding-bottom: calc(1em - 3px);
+        border-top: 0;
+    }
+
+    .icon {
+        width: 32px;
+        height: 32px;
+        margin-left: .4em;
+    }
+}
+
+@media (min-width: 1920px) {
+
+    .slot {
+      margin-top: 72px;
+    }
+
+    li a {
+        font-size: 20px;
+    }
+
+}
 </style>

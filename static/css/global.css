@@ -7,6 +7,12 @@
 html {
     height: 100vh;
   }
+
+  body {
+    display: flex;
+    height: 100%;
+    font-family: "Open Sans", sans-serif;
+  }
   
 ul li {
     list-style: none;
@@ -17,7 +23,3 @@ a {
     /* color: inherit; */
   }
 
-body {
-    display: flex;
-    height: 100%;
-  }
