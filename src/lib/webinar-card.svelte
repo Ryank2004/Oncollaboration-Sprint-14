@@ -1,13 +1,23 @@
+<script>
+  export let title = "";
+  export let speakers = [];
+  export let categories = [];
+</script>
+
 <article>
   <a href="/">
     <div class="container-image">
       <img src="https://fdnd-agency.directus.app/assets/ed2c1154-3eac-4b96-819d-64d7fb2ad1a9" alt="thumbnail">
       <p class="duration">1:43:39</p>
     </div>
-    <h3>IROS CME Webinar: Fractionation in Head & Neck and CNS malignancies; Radiobiology Perspective</h3>
-    <p class="speaker">Prof. R.P. (Rob) Coppes, PhD</p>
+    <h3>{title}</h3>
+    {#each speakers as speaker}
+      <p class="speaker">{speaker}</p>
+    {/each} 
     <div class="categories">
-      <p class="category">Head & Neck</p>
+      {#each categories as category}
+        <p class="category">{category}</p>
+      {/each}  
     </div>
   </a>
 </article>
