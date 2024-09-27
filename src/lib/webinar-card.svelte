@@ -1,14 +1,17 @@
 <script>
+  export let slug = "";
+  export let thumbnail = "";
+  export let duration = "";
   export let title = "";
   export let speakers = [];
   export let categories = [];
 </script>
 
 <article>
-  <a href="/">
+  <a href="/webinar/{slug}">
     <div class="container-image">
-      <img src="https://fdnd-agency.directus.app/assets/ed2c1154-3eac-4b96-819d-64d7fb2ad1a9" alt="thumbnail">
-      <p class="duration">1:43:39</p>
+      <img src="https://fdnd-agency.directus.app/assets/{thumbnail}" alt="thumbnail">
+      <p class="duration">{duration}</p>
     </div>
     <h3>{title}</h3>
     {#each speakers as speaker}
