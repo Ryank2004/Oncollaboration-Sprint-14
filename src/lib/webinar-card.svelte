@@ -3,8 +3,8 @@
   export let thumbnail = "";
   export let duration = "";
   export let title = "";
-  export let speakers = [];
-  export let categories = [];
+  export let speakers = ["Prof. R.P. (Rob) Coppes, PhD", "William Breen, MD"];
+  export let categories = ["Lung", "Head & Neck"];
 </script>
 
 <article>
@@ -14,9 +14,11 @@
       <p class="duration">{duration}</p>
     </div>
     <h3>{title}</h3>
-    {#each speakers as speaker}
-      <p class="speaker">{speaker}</p>
-    {/each} 
+    <div class="speakers">
+      {#each speakers as speaker}
+        <p class="speaker">{speaker}</p>
+      {/each} 
+    </div>
     <div class="categories">
       {#each categories as category}
         <p class="category">{category}</p>
@@ -55,7 +57,6 @@
     border-radius: 10px;
   }
 
-
   article .container-image .duration {
     position: absolute;
     background-color: #1F000B;
@@ -78,14 +79,28 @@
     text-overflow: ellipsis;
   }
 
-  article .speaker {
+  article .speakers {
+    display: flex;
+    gap: .2rem;
+  }
+
+  article .speakers .speaker {
     text-transform: uppercase;
-    color: #6A6A6A;
+    color: #6A0025;
     margin-block: .2rem;
   }
 
-  article .category {
+  article .speakers .speaker:not(:first-child)::before {
+    content: "—";
+  }
+
+  article .categories {
+    display: flex;
+  }
+
+  article .categories .category {
     display: none;
+    margin-inline-end: .5rem;
     padding: 4px;
     width: fit-content;
     background-color: #6A002580;
@@ -110,7 +125,7 @@
       font-size: 20px;
     }
 
-    article .category {
+    article .categories .category {
       display: block;
     }
   }
