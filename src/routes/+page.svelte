@@ -4,6 +4,7 @@
 </script>
 
 <main>
+  <h1>Home</h1>
   {#each data.webinars as webinar}
   <WebinarCard 
     slug = {webinar.slug}
