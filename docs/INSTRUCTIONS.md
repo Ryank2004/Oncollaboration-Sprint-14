@@ -5,7 +5,7 @@ Ontwerp en maak een website voor een opdrachtgever op basis van een Headless CMS
 ## Context
 Deze leertaak hoort bij sprint 14: Lose your Head. Dit is een opdracht die je individueel uitvoert voor een opdrachtgever.
 
-- Bij deze leertaak hoort de workshop [Informatie Architectuur](information-architecture.md)
+- Bij deze leertaak hoort de opdracht [datamodel](datamodel.md)
 - Na een briefing van de opdrachtgever schrijf je altijd een debriefing; volg de instructies van de workshop [briefing/debriefing](https://github.com/fdnd-task/the-client-website/blob/main/docs/briefing-debriefing.md) van sprint 2 the client
 
 
@@ -39,16 +39,5 @@ De development lifecycle kent de volgende stappen:
 
 Deze opdracht is done als:
 
-- []
--[ ] jkygbnl
-
-
-
-<!--
-DOD's deeltaak Content First
-- [ ] Aan de hand van schetsen is gedocumenteerd welke pagina's in jouw project voorkomen.
-- [ ] Per pagina een content model is gedocumenteerd.
-- [ ] Herhaalde elementen zijn aangegeven
--->
-
+- [ ] ...
 
