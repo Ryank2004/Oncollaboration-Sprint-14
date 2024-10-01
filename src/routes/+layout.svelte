@@ -50,14 +50,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 8px;
-    color: black;  
+    font-size: var(--font-size-00);
+    color: var(--text-color);  
     padding: .7em .5em 0; 
   }
 
   li a.active {
-    color: rgba(106, 0, 37, 1);
-    border-top: 2px solid rgba(106, 0, 37, 1);
+    color: var(--primary-color);
+    border-top: var(--border-nav);
     padding-top: calc(.7em - 2px);
   }
 
@@ -68,7 +68,7 @@
 
   @media (min-width: 600px) {
     li a {
-      font-size: 16px;
+      font-size: var(--font-size-1);
     }
 
     .icon {
@@ -95,15 +95,14 @@
 
     li a {
       flex-direction: row-reverse;
-      font-size: 16px;
-      padding: 1em .5em 1em;
+      padding: 1em .5em;
       margin-right: 1.5em;
       font-weight: 700;
     }
 
     li a.active {
       padding-top: 1em;
-      border-bottom: 3px solid rgba(106, 0, 37, 1);
+      border-bottom: var(--border-nav);
       padding-bottom: calc(1em - 3px);
       border-top: 0;
     }
@@ -121,8 +120,7 @@
     }
 
     li a {
-      font-size: 20px;
+      font-size: var(--font-size-3);
     }
-
   }
 </style>

@@ -28,22 +28,18 @@
 </article>
 
 <style>
-  * {
-    margin: 0;
-  }
-
   article {
     margin-inline: .5rem;
-    max-width: 384px;
+    max-width: var(--card-max-width);
   }
 
   article a {
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
   }
 
   article p {
-    font-size: 9px;
+    font-size: var(--font-size-00);
   }
 
   article .container-image{
@@ -54,18 +50,17 @@
     width: 100%;
     height: 80%;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: var(--border-radius-big);
   }
 
   article .container-image .duration {
     position: absolute;
     background-color: #1F000B;
     color: white;
-    margin: 0;
-    padding: 4px;
+    padding: var(--padding-label);
     bottom: 10px;
     right: 10px;
-    border-radius: 5px;
+    border-radius: var(--border-radius-small);
     z-index: 1;
   }
 
@@ -74,7 +69,7 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     word-break: break-all;
-    font-size: 13px;
+    font-size: var(--font-size-0);
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -86,7 +81,7 @@
 
   article .speakers .speaker {
     text-transform: uppercase;
-    color: #6A0025;
+    color: var(--primary-color);
     margin-block: .2rem;
   }
 
@@ -101,10 +96,10 @@
   article .categories .category {
     display: none;
     margin-inline-end: .5rem;
-    padding: 4px;
+    padding: var(--padding-label);
     width: fit-content;
-    background-color: #6A002580;
-    border-radius: 5px;
+    background-color: var(--background-category-color);
+    border-radius: var(--border-radius-small);
   }
 
   article:first-of-type{
@@ -117,12 +112,12 @@
     }
 
     article p {
-      font-size: 13px;
+      font-size: var(--font-size-0);
     }
 
     article h3 {
       -webkit-line-clamp: 2;
-      font-size: 20px;
+      font-size: var(--font-size-3);
     }
 
     article .categories .category {
