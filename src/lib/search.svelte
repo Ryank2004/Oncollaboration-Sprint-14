@@ -17,15 +17,15 @@
 
   input {
     padding: var(--padding-label);
-    width: 90%;
-    background-color: pink;
+    width: 85%;
     border: none;
     border-start-start-radius: var(--border-radius-small);
     border-end-start-radius: var(--border-radius-small);
   }
 
   button {
-    width: 10%;
+    padding: var(--padding-label);
+    width: 15%;
     background-color: var(--primary-color);
     border: none;
     border-start-end-radius: var(--border-radius-small);
@@ -35,5 +35,42 @@
 
   button svg path {
     fill: var(--alt-text-color);
+  }
+
+  @media only screen and (min-width: 400px) {
+    input {
+      width: 90%;
+    }
+
+    button {
+      width: 10%;
+    }
+  }
+
+  @media only screen and (min-width: 1080px) {
+    div {
+      flex-direction: row-reverse;
+    }
+
+    input {
+      width: 95%;
+      border-start-start-radius: 0;
+      border-end-start-radius: 0;
+      border-start-end-radius: var(--border-radius-small);
+      border-end-end-radius: var(--border-radius-small);
+    }
+
+    button {
+      width: 5%;
+      background-color: white;
+      border-start-start-radius: var(--border-radius-small);
+      border-end-start-radius: var(--border-radius-small);
+      border-start-end-radius: 0;
+      border-end-end-radius: 0;
+    }
+
+    button svg path {
+      fill:var(--primary-color);
+    }
   }
 </style>
