@@ -1,25 +1,29 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font: "Open Sans", sans-serif;
 }
 
 html {
-    height: 100vh;
-  }
+  height: 100vh;
+}
 
-  body {
-    display: flex;
-    height: 100%;
-    font-family: "Open Sans", sans-serif;
-  }
-  
+body {
+  display: flex;
+  height: 100%;
+  font-family: var(--font);
+}
+
 ul li {
-    list-style: none;
-  }
+  list-style: none;
+}
 
 a {
-    text-decoration: none;
-    /* color: inherit; */
-  }
+  text-decoration: none;
+  /* color: inherit; */
+}
 
