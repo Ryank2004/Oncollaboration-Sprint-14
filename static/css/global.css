@@ -18,10 +18,12 @@
   --font-size-8: 3.5rem; */
 
   --text-color: #000000;
+  --alt-text-color: #ffffff;
   --primary-color: #6a0025;
   --background-category-color: #D2B2BD;
 
   --padding-label: 4px;
+  --margin-center: 0 auto;
 
   --border-radius-small: 5px;
   --border-radius-big: 10px;
