@@ -32,6 +32,11 @@
 </div>
 
 <style>
+
+  .slot {
+    background-color: var(--body-color);
+  }
+
   nav {
     position: absolute;
     bottom: 0;
