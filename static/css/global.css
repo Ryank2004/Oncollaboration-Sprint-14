@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font: "Open Sans", sans-serif;
+  --font-size-00: .5rem;
+  --font-size-0: .75rem;
+  --font-size-1: 1rem;
+  --font-size-2: 1.1rem;
+  --font-size-3: 1.25rem;
+  /* --font-size-4: 1.5rem;
+  --font-size-5: 2rem;
+  --font-size-6: 2.5rem;
+  --font-size-7: 3rem;
+  --font-size-8: 3.5rem; */
+
+  --text-color: #000000;
+  --primary-color: #6a0025;
+  --background-category-color: #D2B2BD;
+
+  --padding-label: 4px;
+
+  --border-radius-small: 5px;
+  --border-radius-big: 10px;
+  --border-nav: 3px solid var(--primary-color);
+
+  --card-max-width: 384px;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  font-family: var(--font);
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  /* color: inherit; */
+}
+

@@ -1,2 +1,23 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  import WebinarCard from "../lib/webinar-card.svelte";
+  export let data; 
+</script>
+
+<main>
+  <h1>Home</h1>
+  {#each data.webinars as webinar}
+  <WebinarCard 
+    slug = {webinar.slug}
+    thumbnail = {webinar.thumbnail}
+    duration = {webinar.duration}
+    title = {webinar.title}
+    speakers = {webinar.speakers}
+    categories = {webinar.categories} />
+  {/each}
+</main>
+
+<style>
+  main{
+    display: flex;
+  }
+</style>
