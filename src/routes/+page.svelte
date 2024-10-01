@@ -1,5 +1,6 @@
 <script>
   import WebinarCard from "../lib/webinar-card.svelte";
+  import ContouringOverview from "../lib/countouring-overview.svelte";
   export let data; 
 </script>
 
@@ -14,6 +15,15 @@
     speakers = {webinar.speakers}
     categories = {webinar.categories} />
   {/each}
+
+  {#each data.contourings as contouring}
+  <ContouringOverview
+    slug = {contouring.slug}
+    image_scan = {contouring.image_scan}
+    title = {contouring.title}
+    user = {contouring.user}
+    categories = {contouring.categories} />
+  {/each} 
 </main>
 
 <style>

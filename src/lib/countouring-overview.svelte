@@ -1,22 +1,30 @@
-<main>
+<script>
+    export let slug = "";
+    export let image_scan = "";
+    export let title = "";
+    export let categories = ["LUNG"];
+    export let user ="Sergio Eijben";
+</script>
+
     <article class="contouring-card">
-            <a href="#" aria-label="#">
-                <div class="main-image">
-                    <img src="/images/scan-test.png" alt="#" width="384" height="384" />
-                    <span>LUNG</span>
-                </div>
-                <h1>IMA-431</h1>
-                <p>Sergio Eijben</p>
-            </a>
-        </article>
-</main>
+        <a href="/contourings/{slug}">
+            <div class="main-image">
+                <img src="https://fdnd-agency.directus.app/assets/{image_scan}" alt="#" width="384" height="384" />
+                <span>{categories}</span>
+            </div>
+            <h1>{title}</h1>
+            <p>{user}</p>
+        </a>
+    </article>
 
 <style>
     
-    article {
+    .contouring-card {
         padding: 10px;
         width: 384px;
         height: 458px;
+        margin-inline: .5rem;
+        max-width: var(--card-max-width);
     }
 
     .main-image {
@@ -26,17 +34,19 @@
 
     span {
         position: absolute;
-        z-index: 2;
-        color: black;
-        border-radius: 5px;
+        color: var(--text-color);
+        font-size: var(--font-size-2);
+        font-weight: 700;
+        border-radius: var(--border-radius-small);
         padding: 5px;
+        gap: 10px;
         background-color: white;
         top: 88%;
         left: 80%;
     }
 
     img {
-        border-radius: 10px;
+        border-radius: var(--border-radius-big);
     }
 
     h1,
@@ -44,16 +54,16 @@
     a {
         margin: 0;
         padding: 0;
-        color: black;
+        color: var(--text-color);
         text-decoration: none;
     }
 
     h1 {
-        font-size: 30px;
+        font-size: var(--font-size-4);
     }
 
     p {
-        font-size: 25px;
+        font-size: var(--font-size-2);
     }
 
     @media screen and (max-width: 600px) {
@@ -62,12 +72,12 @@
             visibility: hidden;
         }
 
-        p {
-            font-size: 12px;
+        h1 {
+            font-size: var(--font-size-0);
         }
 
-        h1 {
-            font-size: 18px;
+        p {
+            font-size: var( --font-size-00);
         }
 
         img {
