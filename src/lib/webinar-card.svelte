@@ -112,12 +112,12 @@
     }
 
     article p {
-      font-size: var(--font-size-0);
+      font-size: var(--font-size-2);
     }
 
     article h3 {
       -webkit-line-clamp: 2;
-      font-size: var(--font-size-3);
+      font-size: var(--font-size-4);
     }
 
     article .categories .category {
