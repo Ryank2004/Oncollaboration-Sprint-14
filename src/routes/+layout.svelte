@@ -39,6 +39,7 @@
     padding: 0 1em .5em;
     z-index: 1000;
     box-shadow: 0px -4px 17px 0px rgba(0,0,0,0.3);
+    background-color: white;
   }
 
   ul {
@@ -64,6 +65,10 @@
   .icon {
     width: 24px;
     height: 24px;
+  }
+
+  div {
+    background-color: var(--background-color);
   }
 
   @media (min-width: 600px) {

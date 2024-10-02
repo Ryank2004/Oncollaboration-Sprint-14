@@ -42,7 +42,7 @@
     font-size: var(--font-size-00);
   }
 
-  article .container-image{
+  article .container-image {
     position: relative;
   }  
 
@@ -56,7 +56,7 @@
   article .container-image .duration {
     position: absolute;
     background-color: #1F000B;
-    color: white;
+    color: var(--alt-text-color);
     padding: var(--padding-label);
     bottom: 10px;
     right: 10px;
@@ -102,11 +102,11 @@
     border-radius: var(--border-radius-small);
   }
 
-  article:first-of-type{
+  article:first-of-type {
     margin-left: 0;
   }
   
-  @media only screen and (min-width: 600px){
+  @media only screen and (min-width: 600px) {
     article {
       margin-inline: 1rem;
     }
