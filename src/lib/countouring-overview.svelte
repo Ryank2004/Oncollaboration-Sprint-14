@@ -2,8 +2,9 @@
     export let slug = "";
     export let image_scan = "";
     export let title = "";
+    export let user = ["Sergio Eijben"];
     export let categories = ["LUNG"];
-    export let user ="Sergio Eijben";
+    
 </script>
 
     <article class="contouring-card">
