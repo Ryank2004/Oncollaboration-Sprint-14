@@ -3,8 +3,7 @@
     export let image_scan = "";
     export let title = "";
     export let user = ["Sergio Eijben"];
-    export let categories = ["LUNG"];
-    
+    export let categories = ["LUNG"];  
 </script>
 
     <article class="contouring-card">
@@ -22,15 +21,13 @@
     
     .contouring-card {
         padding: 10px;
-        width: 384px;
-        height: 458px;
         margin-inline: .5rem;
         max-width: var(--card-max-width);
     }
 
     .main-image {
         position: relative;
-        max-width: 100%;
+        width: 100%;
     }
 
     span {
@@ -42,11 +39,15 @@
         padding: 5px;
         gap: 10px;
         background-color: white;
-        top: 88%;
-        left: 80%;
+        bottom: 10px;
+        right: 10px;
+        opacity: 0;
+        visibility: hidden;
     }
 
     img {
+        height: auto;
+        width: 100%;
         border-radius: var(--border-radius-big);
     }
 
@@ -60,30 +61,25 @@
     }
 
     h1 {
-        font-size: var(--font-size-4);
+        font-size: var(--font-size-0);
     }
 
     p {
-        font-size: var(--font-size-2);
+        font-size: var(--font-size-00);
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (min-width: 600px) {
         span {
-            opacity: 0;
-            visibility: hidden;
+            opacity: 1;
+            visibility: visible;
         }
 
         h1 {
-            font-size: var(--font-size-0);
+            font-size: var(--font-size-4);
         }
 
         p {
-            font-size: var( --font-size-00);
-        }
-
-        img {
-            height: 154px;
-            width: 154px;
+            font-size: var( --font-size-2);
         }
     }
 </style>
