@@ -56,7 +56,8 @@
 
   form {
     display: flex;
-    flex-wrap: wrap;
+    overflow-x: auto;
+    width: 99vw;
   }
 
   label {
@@ -65,6 +66,7 @@
     text-transform: uppercase;
     background-color: var(--background-category-color);
     border-radius: var(--border-radius-small);
+    flex-shrink: 0;
     cursor: pointer;
   }
 
@@ -89,6 +91,7 @@
     }
 
     form {
+      flex-wrap: wrap;
       justify-content: center;
     }
 
