@@ -31,6 +31,8 @@
   --border-nav: 3px solid var(--primary-color);
 
   --card-max-width: 384px;
+
+  --focus: solid 2px blue;
 }
 
 html {
@@ -49,6 +51,9 @@ ul li {
 
 a {
   text-decoration: none;
-  /* color: inherit; */
 }
 
+:focus {
+  outline: var(--focus);
+  border-radius: var(--border-radius-small);
+}
