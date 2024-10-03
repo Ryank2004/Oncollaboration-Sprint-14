@@ -1,63 +1,51 @@
-<div class="filter-container">
-  <legend>Filter</legend>
-  <form action="" id="filter" name="filter">
-    <label>
-      <input type="checkbox" id="breast">
-      Breast
-    </label>
-  
-    <label>
-      <input type="checkbox" id="gastrointestinal">
-      Gastrointestinal
-    </label>
+<form action="" id="filter" name="filter">
+  <label>
+    <input type="checkbox" id="breast">
+    Breast
+  </label>
 
-    <label>
-      <input type="checkbox" id="gynaecology">
-      Gynaecology
-    </label>
-  
-    <label>
-      <input type="checkbox" id="head-neck">
-      Head & neck
-    </label>
-  
-    <label>
-      <input type="checkbox" id="lung">
-      Lung
-    </label>
+  <label>
+    <input type="checkbox" id="gastrointestinal">
+    Gastrointestinal
+  </label>
 
-    <label>
-      <input type="checkbox" id="neuro-oncology">
-      Neuro-oncology
-    </label>
-  
-    <label>
-      <input type="checkbox" id="prostate">
-      Prostate
-    </label>
-  
-    <label>
-      <input type="checkbox" id="urology">
-      Urology
-    </label>
-  </form>
-</div>
+  <label>
+    <input type="checkbox" id="gynaecology">
+    Gynaecology
+  </label>
 
+  <label>
+    <input type="checkbox" id="head-neck">
+    Head & neck
+  </label>
+
+  <label>
+    <input type="checkbox" id="lung">
+    Lung
+  </label>
+
+  <label>
+    <input type="checkbox" id="neuro-oncology">
+    Neuro-oncology
+  </label>
+
+  <label>
+    <input type="checkbox" id="prostate">
+    Prostate
+  </label>
+
+  <label>
+    <input type="checkbox" id="urology">
+    Urology
+  </label>
+</form>
 
 <style>
-  .filter-container {
-    margin: var(--margin-center);
-    width: fit-content;
-  }
-
-  legend {
-    text-align: center;
-  }
-
   form {
     display: flex;
     overflow-x: auto;
     width: 99vw;
+    -webkit-mask: linear-gradient(90deg,#0000,#000 5% 95%,#0000);
   }
 
   label {
@@ -82,14 +70,10 @@
 
   input {
     position: absolute;
-    left: -999999em;
+    top: -999999em;
   }
 
   @media only screen and (min-width:600px) {
-    legend {
-      display: none;
-    }
-
     form {
       flex-wrap: wrap;
       justify-content: center;
