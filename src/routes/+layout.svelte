@@ -32,7 +32,6 @@
 </div>
 
 <style>
-
   nav {
     position: fixed;
     background-color: white;

@@ -77,6 +77,10 @@
     margin-bottom: 1em;
   }
 
+  .margin {
+    margin-bottom: 50px;
+  }
+
   .carrousel {
     display: flex;
     overflow-x: auto;
@@ -108,6 +112,10 @@
 
   @media screen and (min-width: 500px){
     .kaart {
+      flex: 0 0 auto;
+    }
+
+    .contouringkaart {
       flex: 0 0 auto;
     }
   }
