@@ -2,7 +2,7 @@
   export let slug = "";
   export let image_scan = "";
   export let title = "";
-  export let user = ["Sergio Eijben"];
+  export let user_id = ["Sergio Eijben"];
   export let categories = ["LUNG"];  
 </script>
 
@@ -13,7 +13,7 @@
       <span>{categories}</span>
     </div>
     <h3>{title}</h3>
-    <p>{user}</p>
+    <p>{user_id}</p>
   </a>
 </article>
 

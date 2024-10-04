@@ -14,13 +14,7 @@
       <div class="carrousel">
         {#each data.webinars as webinar}
           <div class="kaart">
-            <WebinarCard 
-              slug = {webinar.slug}
-              thumbnail = {webinar.thumbnail}
-              duration = {webinar.duration}
-              title = {webinar.title}
-              speakers = {webinar.speakers}
-              categories = {webinar.categories} />
+            <WebinarCard {...webinar} />
           </div>
         {/each}
       </div>
@@ -32,12 +26,7 @@
       <div class="carrousel">
         {#each data.contourings as contouring}
           <div class="contouringkaart">
-        <ContouringOverview
-          slug = {contouring.slug}
-          image_scan = {contouring.image_scan}
-          title = {contouring.title}
-          user = {contouring.user}
-          categories = {contouring.categories} />
+        <ContouringOverview {...contouring} />
           </div>
         {/each} 
       </div> 
