@@ -1,10 +1,12 @@
 import fetchJson from "../lib/fetch-json";
 
+const baseURL = 'https://fdnd-agency.directus.app/items/'
+
 export async function load() {
-  const url = 'https://fdnd-agency.directus.app/items/avl_webinars';
-  const contouring = 'https://fdnd-agency.directus.app/items/avl_contourings';
+  const webinar = `${baseURL}avl_webinars`;
+  const contouring = `${baseURL}avl_contourings`;
   
-  const webinars = await fetchJson(url);
+  const webinars = await fetchJson(webinar);
   const contourings = await fetchJson(contouring);
   
   return {
