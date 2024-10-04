@@ -92,6 +92,15 @@
     gap: 10px;
   }
 
+  .kaart:focus-within {
+    outline: var(--focus);
+    border-radius: var(--border-radius-small);
+  }
+
+  .kaart:not(:focus-visible) {
+    outline: 0;
+  }
+
   .kaart {
     flex: 0 0 calc(100% - 20%);
     scroll-snap-align: start;
@@ -104,6 +113,15 @@
     scroll-snap-align: start;
     border-radius: 10px;
     box-sizing: border-box;
+  }
+
+  .contouringkaart:focus-within {
+    outline: var(--focus);
+    border-radius: var(--border-radius-small);
+  }
+
+  .contouringkaart:not(:focus-visible) {
+    outline: 0;
   }
 
  .carrousel::-webkit-scrollbar {
