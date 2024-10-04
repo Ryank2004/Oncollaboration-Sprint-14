@@ -40,6 +40,8 @@
   --border-nav: 3px solid var(--primary-color);
 
   --card-max-width: 384px;
+
+  --focus: solid 2px blue;
 }
 
 html {
@@ -66,3 +68,7 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 400;
 }
 
+:focus {
+  outline: var(--focus);
+  border-radius: var(--border-radius-small);
+}
