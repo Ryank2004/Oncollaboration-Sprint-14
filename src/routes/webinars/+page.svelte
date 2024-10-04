@@ -13,7 +13,7 @@
 
   <Filter />
 
-  <section>
+  <div>
     {#each data.webinars as webinar}
     <WebinarCard 
       slug = {webinar.slug}
@@ -23,7 +23,7 @@
       speakers = {webinar.speakers}
       categories = {webinar.categories} />
     {/each}
-  </section>
+  </div>
 </main>
 
 <style>
@@ -31,7 +31,7 @@
     width: 100vw;
   }
 
-  section {
+  div {
     display: flex;
   }
 </style>
