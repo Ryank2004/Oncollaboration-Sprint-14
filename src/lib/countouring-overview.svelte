@@ -50,7 +50,7 @@
     border-radius: var(--border-radius-big);
   }
 
-  h1,
+  h3,
   p,
   a {
     margin: 0;
@@ -59,7 +59,7 @@
     text-decoration: none;
   }
 
-  h1 {
+  h3 {
     font-size: var(--font-size-0);
   }
 
@@ -73,7 +73,7 @@
       visibility: visible;
     }
 
-    h1 {
+    h3 {
       font-size: var(--font-size-4);
     }
 
