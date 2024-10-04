@@ -34,7 +34,7 @@
 <style>
 
   nav {
-    position: absolute;
+    position: fixed;
     background-color: white;
     bottom: 0;
     width: 100%;
@@ -54,7 +54,7 @@
     flex-direction: column;
     align-items: center;
     font-size: var(--font-size-00);
-    color: var(--text-color);  
+    color: rgba(116, 116, 116, 1);
     padding: .7em .5em 0; 
   }
 

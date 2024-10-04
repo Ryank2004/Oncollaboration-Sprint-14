@@ -19,8 +19,8 @@
 
 <style>
   .contouring-card {
-    padding: 10px;
-    margin-inline: .5rem;
+    /* padding: 10px;
+    margin-inline: .5rem; */
     max-width: var(--card-max-width);
   }
 

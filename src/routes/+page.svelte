@@ -27,15 +27,20 @@
 
     <a href="/webinars">SEE MORE</a>
   
-    <section>
+    <h2>Contourings</h2>
+
+    <section class="carrousel">
       {#each data.contourings as contouring}
+        <div class="contouringkaart">
       <ContouringOverview
         slug = {contouring.slug}
         image_scan = {contouring.image_scan}
         title = {contouring.title}
         user = {contouring.user}
         categories = {contouring.categories} />
+        </div>
       {/each} 
+    
     </section> 
   
     <a href="/contourings">SEE MORE</a>
@@ -67,6 +72,7 @@
     padding: 5px 43px;
     border-radius: 5px;
     margin-left: auto;
+    margin-bottom: 1em;
   }
 
   .carrousel {
@@ -82,6 +88,13 @@
 
   .kaart {
     flex: 0 0 calc(100% - 20%);
+    scroll-snap-align: start;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+
+  .contouringkaart {
+    flex: 0 0 calc(100% - 42%);
     scroll-snap-align: start;
     border-radius: 10px;
     box-sizing: border-box;
