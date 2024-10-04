@@ -1,11 +1,14 @@
 <script>
-  import WebinarCard from "../lib/webinar-card.svelte";
+  import ContouringOverview from "$lib/countouring-overview.svelte";
+  import WebinarCard from "$lib/webinar-card.svelte";
+  import Search from "$lib/search.svelte";
+
   export let data; 
 </script>
 
-<main>
-  
+<main>  
     <h1>OVERVIEW</h1>
+    <Search />
     <h2>Webinars</h2>
 
     <section class="carrousel">
@@ -23,10 +26,22 @@
     </section>
 
     <a href="/webinars">SEE MORE</a>
+  
+    <section>
+      {#each data.contourings as contouring}
+      <ContouringOverview
+        slug = {contouring.slug}
+        image_scan = {contouring.image_scan}
+        title = {contouring.title}
+        user = {contouring.user}
+        categories = {contouring.categories} />
+      {/each} 
+    </section> 
+  
+    <a href="/contourings">SEE MORE</a>
 </main>
 
 <style>
-
   main {
     display: flex;
     flex-direction: column;
@@ -77,14 +92,12 @@
   }
 
   @media screen and (min-width: 500px){
-
     .kaart {
       flex: 0 0 auto;
     }
   }
 
   @media screen and (min-width: 1000px){
-
     .carrousel {
       margin: 0;
     }
