@@ -41,7 +41,7 @@
           </div>
         {/each} 
       </div> 
-      <a href="/contourings">SEE MORE</a>  
+      <a class="margin" href="/contourings">SEE MORE</a>  
     </section>
 </main>
 
