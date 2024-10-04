@@ -33,12 +33,9 @@
 
 <style>
 
-  .slot {
-    background-color: var(--body-color);
-  }
-
   nav {
     position: absolute;
+    background-color: white;
     bottom: 0;
     width: 100%;
     padding: 0 1em .5em;
