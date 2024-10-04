@@ -12,7 +12,7 @@
       <img src="https://fdnd-agency.directus.app/assets/{image_scan}" alt="#" width="384" height="384" />
       <span>{categories}</span>
     </div>
-    <h1>{title}</h1>
+    <h3>{title}</h3>
     <p>{user}</p>
   </a>
 </article>
