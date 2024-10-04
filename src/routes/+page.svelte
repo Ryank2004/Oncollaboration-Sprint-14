@@ -9,65 +9,67 @@
 <main>  
     <h1>OVERVIEW</h1>
     <Search />
-    <h2>Webinars</h2>
-
-    <section class="carrousel">
-      {#each data.webinars as webinar}
-        <div class="kaart">
-          <WebinarCard 
-            slug = {webinar.slug}
-            thumbnail = {webinar.thumbnail}
-            duration = {webinar.duration}
-            title = {webinar.title}
-            speakers = {webinar.speakers}
-            categories = {webinar.categories} />
-        </div>
-      {/each}
+    <section>
+      <h2>Webinars</h2>
+      <div class="carrousel">
+        {#each data.webinars as webinar}
+          <div class="kaart">
+            <WebinarCard 
+              slug = {webinar.slug}
+              thumbnail = {webinar.thumbnail}
+              duration = {webinar.duration}
+              title = {webinar.title}
+              speakers = {webinar.speakers}
+              categories = {webinar.categories} />
+          </div>
+        {/each}
+      </div>
+      <a href="/webinars">SEE MORE</a>
     </section>
 
-    <a href="/webinars">SEE MORE</a>
-  
-    <h2>Contourings</h2>
-
-    <section class="carrousel">
-      {#each data.contourings as contouring}
-        <div class="contouringkaart">
-      <ContouringOverview
-        slug = {contouring.slug}
-        image_scan = {contouring.image_scan}
-        title = {contouring.title}
-        user = {contouring.user}
-        categories = {contouring.categories} />
-        </div>
-      {/each} 
-    
-    </section> 
-  
-    <a href="/contourings">SEE MORE</a>
+    <section>
+      <h2>Contourings</h2>
+      <div class="carrousel">
+        {#each data.contourings as contouring}
+          <div class="contouringkaart">
+        <ContouringOverview
+          slug = {contouring.slug}
+          image_scan = {contouring.image_scan}
+          title = {contouring.title}
+          user = {contouring.user}
+          categories = {contouring.categories} />
+          </div>
+        {/each} 
+      </div> 
+      <a href="/contourings">SEE MORE</a>  
+    </section>
 </main>
 
 <style>
   main {
-    display: flex;
-    flex-direction: column;
     margin-top: 1.2em;
     margin-right: 1em;
     margin-left: 1em;
   }
 
   h1 {
-    font-size: 28px;
+    font-size: var(--font-size-4);
   }
 
   h2 {
-    font-size: 18px;
+    font-size: var(--font-size-2);
     margin-bottom: .8em;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
   }
 
   a {
     color: white;
     background-color: var(--primary-color);
-    font-size: 11px;
+    font-size: var(--font-size-0);
     font-weight: 700;
     padding: 5px 43px;
     border-radius: 5px;
@@ -107,6 +109,20 @@
   @media screen and (min-width: 500px){
     .kaart {
       flex: 0 0 auto;
+    }
+  }
+
+  @media screen and (min-width: 600px){
+    h1 {
+      font-size: var(--font-size-6);
+    }
+
+    h2 {
+      font-size: var(--font-size-4);
+    }
+
+    a {
+      font-size: var(--font-size-2);
     }
   }
 
