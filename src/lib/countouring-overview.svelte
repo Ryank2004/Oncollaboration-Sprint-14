@@ -3,7 +3,7 @@
   export let image_scan = "";
   export let title = "";
   export let user = ["Sergio Eijben"];
-  export let categories = ["LUNG"];  
+  export let categories = "";  
 </script>
 
 <article class="contouring-card">
