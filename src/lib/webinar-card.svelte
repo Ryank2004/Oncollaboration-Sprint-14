@@ -3,25 +3,25 @@
   export let thumbnail = "";
   export let duration = "";
   export let title = "";
-  export let speakers = ["Prof. R.P. (Rob) Coppes, PhD", "William Breen, MD"];
-  export let categories = ["Lung", "Head & Neck"];
+  export let speakers = [];
+  export let categories = [];
 </script>
 
 <article>
   <a href="/webinar/{slug}">
     <div class="container-image">
-      <img src="https://fdnd-agency.directus.app/assets/{thumbnail}" alt="thumbnail">
+      <img src="https://fdnd-agency.directus.app/assets/{thumbnail.id}" alt="thumbnail">
       <p class="duration">{duration}</p>
     </div>
     <h3>{title}</h3>
-    <div class="speakers">
+    <p class="speakers">
       {#each speakers as speaker}
-        <p class="speaker">{speaker}</p>
+        <span class="speaker">{speaker.avl_speakers_id.fullname}</span>
       {/each} 
-    </div>
+    </p>
     <div class="categories">
       {#each categories as category}
-        <p class="category">{category}</p>
+        <p class="category">{category.avl_categories_id.name}</p>
       {/each}  
     </div>
   </a>
@@ -75,8 +75,7 @@
   }
 
   article .speakers {
-    display: flex;
-    gap: .2rem;
+    display: inline;
   }
 
   article .speakers .speaker {

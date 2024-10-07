@@ -2,18 +2,20 @@
   export let slug = "";
   export let image_scan = "";
   export let title = "";
-  export let user_id = ["Sergio Eijben"];
-  export let categories = ["LUNG"];  
+  export let user_id = [];
+  export let categories = [];  
 </script>
 
 <article class="contouring-card">
   <a href="/contourings/{slug}">
     <div class="main-image">
-      <img src="https://fdnd-agency.directus.app/assets/{image_scan}" alt="#" width="384" height="384" />
-      <span>{categories}</span>
+      <img src="https://fdnd-agency.directus.app/assets/{image_scan.id}" alt="{image_scan.description}" width="384" height="384" />
+      {#each categories as category}
+        <span>{category.avl_categories_id.name}</span>
+      {/each} 
     </div>
     <h3>{title}</h3>
-    <p>{user_id}</p>
+    <p>{user_id.fullname}</p>
   </a>
 </article>
 
