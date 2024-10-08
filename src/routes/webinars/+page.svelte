@@ -1,5 +1,5 @@
 <script>
-  import {Search, Filter, WebinarOverview} from "$lib";
+  import {Search, Filter, WebinarOverview} from "$lib/index.js";
 
   export let data
 </script>
