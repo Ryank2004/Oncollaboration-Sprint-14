@@ -6,10 +6,10 @@
   export let categories = [];  
 </script>
 
-<article class="contouring-card">
+<article>
   <a href="/contourings/{slug}">
-    <div class="main-image">
-      <img src="https://fdnd-agency.directus.app/assets/{image_scan.id}" alt="{image_scan.description}" width="384" height="384" />
+    <div>
+      <img src="https://fdnd-agency.directus.app/assets/{image_scan.id}" alt="CT-Scans" width="384" height="384" />
       {#each categories as category}
         <span>{category.avl_categories_id.name}</span>
       {/each} 
@@ -20,11 +20,11 @@
 </article>
 
 <style>
-  .contouring-card {
+  article {
     max-width: var(--card-max-width);
   }
 
-  .main-image {
+  div {
     position: relative;
     width: 100%;
   }

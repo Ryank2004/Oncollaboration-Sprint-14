@@ -1,7 +1,5 @@
 <script>
-  import Search from "$lib/search.svelte"
-  import Filter from "$lib/filter.svelte";
-  import WebinarCard from "$lib/webinar-card.svelte";
+  import {Search, Filter, WebinarOverview} from "$lib";
 
   export let data
 </script>
@@ -15,13 +13,7 @@
 
   <div>
     {#each data.webinars as webinar}
-    <WebinarCard 
-      slug = {webinar.slug}
-      thumbnail = {webinar.thumbnail}
-      duration = {webinar.duration}
-      title = {webinar.title}
-      speakers = {webinar.speakers}
-      categories = {webinar.categories} />
+    <WebinarOverview {...webinar} />
     {/each}
   </div>
 </main>
@@ -33,5 +25,6 @@
 
   div {
     display: flex;
+    flex-wrap: wrap;
   }
 </style>
