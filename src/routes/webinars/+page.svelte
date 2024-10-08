@@ -1,8 +1,5 @@
 <script>
-  // import {Search, Filter, WebinarOverview} from "$lib/index.js";
-  import Search from "$lib/Search.svelte";
-  import Filter from "$lib/Filter.svelte";
-  import WebinarOverview from "$lib/WebinarOverview.svelte";
+  import {Search, Filter, WebinarOverview} from "$lib/index.js";
 
   export let data
 </script>
@@ -16,13 +13,7 @@
 
   <div>
     {#each data.webinars as webinar}
-    <WebinarOverview 
-    slug = {webinar.slug}
-    thumbnail = {webinar.thumbnail}
-    duration = {webinar.duration}
-    title = {webinar.title}
-    speakers = {webinar.speakers}
-    categories = {webinar.categories}/>
+    <WebinarOverview {...webinar}/>
     {/each}
   </div>
 </main>

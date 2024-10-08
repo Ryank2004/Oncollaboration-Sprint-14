@@ -8,7 +8,7 @@
 </script>
 
 <article>
-  <a href="/webinar/{slug}">
+  <a href="/webinars/{slug}">
     <div class="container-image">
       <img src="https://fdnd-agency.directus.app/assets/{thumbnail.id}" alt="thumbnail">
       <p class="duration">{duration}</p>
@@ -16,7 +16,7 @@
     <h3>{title}</h3>
     <p class="speakers">
       {#each speakers as speaker}
-        <span class="speaker">{speaker.avl_speakers_id.fullname}</span>
+        <span>{speaker.avl_speakers_id.fullname}</span>
       {/each} 
     </p>
     <div class="categories">
@@ -78,13 +78,13 @@
     display: inline;
   }
 
-  article .speakers .speaker {
+  article .speakers span {
     text-transform: uppercase;
     color: var(--primary-color);
     margin-block: .2rem;
   }
 
-  article .speakers .speaker:not(:first-child)::before {
+  article .speakers span:not(:first-child)::before {
     content: "—";
   }
 

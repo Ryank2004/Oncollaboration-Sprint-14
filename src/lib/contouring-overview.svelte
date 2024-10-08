@@ -2,7 +2,7 @@
   export let slug = "";
   export let image_scan = "";
   export let title = "";
-  export let user_id = [];
+  export let user_id = "";
   export let categories = [];  
 </script>
 
