@@ -16,13 +16,7 @@
 
   <div>
     {#each data.webinars as webinar}
-    <WebinarOverview 
-    slug = {webinar.slug}
-    thumbnail = {webinar.thumbnail}
-    duration = {webinar.duration}
-    title = {webinar.title}
-    speakers = {webinar.speakers}
-    categories = {webinar.categories}/>
+    <WebinarOverview {...webinar}/>
     {/each}
   </div>
 </main>
