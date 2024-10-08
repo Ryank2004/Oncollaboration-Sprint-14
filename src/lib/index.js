@@ -1,5 +1,5 @@
-import ContouringOverview from "./CountouringOverview.svelte"
-import Search from "./Search.svelte"
+import ContouringOverview from "./CountouringOverview.svelte";
+import Search from "./Search.svelte";
 import Filter from "./Filter.svelte";
 import WebinarOverview from "./WebinarOverview.svelte";
 
