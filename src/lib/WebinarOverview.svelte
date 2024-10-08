@@ -8,7 +8,7 @@
 </script>
 
 <article>
-  <a href="/webinar/{slug}">
+  <a href="/webinars/{slug}">
     <div class="container-image">
       <img src="https://fdnd-agency.directus.app/assets/{thumbnail.id}" alt="thumbnail">
       <p class="duration">{duration}</p>
