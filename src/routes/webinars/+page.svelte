@@ -1,5 +1,8 @@
 <script>
-  import {Search, Filter, WebinarOverview} from "$lib/index.js";
+  // import {Search, Filter, WebinarOverview} from "$lib/index.js";
+  import Search from "$lib/Search.svelte";
+  import Filter from "$lib/Filter.svelte";
+  import WebinarOverview from "$lib/WebinarOverview.svelte";
 
   export let data
 </script>
