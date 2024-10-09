@@ -1,7 +1,8 @@
 <script>
-  import { page } from '$app/stores';
+  import Navigation from '$lib/Navigation.svelte'
 </script>
 
+<<<<<<< Updated upstream
 <nav>
   <ul>
     <li>
@@ -26,107 +27,26 @@
     </li>
   </ul>
 </nav>
+=======
+
+<Navigation />
+>>>>>>> Stashed changes
 
 <div class="slot">
   <slot />
 </div>
 
 <style>
-  nav {
-    position: fixed;
-    background-color: white;
-    bottom: 0;
-    width: 100%;
-    padding: 0 1em .5em;
-    z-index: 1000;
-    box-shadow: 0px -4px 17px 0px rgba(0,0,0,0.3);
-    background-color: white;
-  }
 
-  ul {
-    display: flex;
-    justify-content: space-around;
-  }
+@media (min-width: 1080px) {
+  .slot {
+    margin-top: 64px;
+      }
+}
 
-  li a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: var(--font-size-00);
-    color: rgba(116, 116, 116, 1);
-    padding: .7em .5em 0; 
-  }
-
-  li a.active {
-    color: var(--primary-color);
-    border-top: var(--border-nav);
-    padding-top: calc(.7em - 2px);
-  }
-
-  .icon {
-    width: 24px;
-    height: 24px;
-  }
-
-  div {
-    background-color: var(--background-color);
-  }
-
-  @media (min-width: 600px) {
-    li a {
-      font-size: var(--font-size-1);
-    }
-
-    .icon {
-      width: 28px;
-      height: 28px;
-    }
-  }
-
-  @media (min-width: 1080px) {
-    .slot {
-      margin-top: 64px;
-    }
-
-    nav {
-      bottom: auto;
-      top: 0;
-      box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.3);
-      padding: 0;
-    }
-
-    ul {
-      justify-content: right;
-    }
-
-    li a {
-      flex-direction: row-reverse;
-      padding: 1em .5em;
-      margin-right: 1.5em;
-      font-weight: 700;
-    }
-
-    li a.active {
-      padding-top: 1em;
-      border-bottom: var(--border-nav);
-      padding-bottom: calc(1em - 3px);
-      border-top: 0;
-    }
-
-    .icon {
-      width: 32px;
-      height: 32px;
-      margin-left: .4em;
-    }
-  }
-
-  @media (min-width: 1920px) {
-    .slot {
-      margin-top: 72px;
-    }
-
-    li a {
-      font-size: var(--font-size-3);
-    }
-  }
+    @media (min-width: 1920px) {
+  .slot {
+    margin-top: 72px;
+      }
+}
 </style>
