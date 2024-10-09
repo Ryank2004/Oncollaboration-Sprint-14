@@ -1,6 +1,9 @@
 <script>
   import { ContouringOverview, Search, WebinarOverview } from "$lib/index.js";
   export let data;
+
+  let newestWebinars = data.webinars.slice(0,4);
+  let newestContourings = data.contourings.slice(0,4);
 </script>
 
 <main>
@@ -9,9 +12,9 @@
   <section>
     <h2>Webinars</h2>
     <div class="carrousel">
-      {#each data.webinars as webinar}
+      {#each newestWebinars as webinar}
         <div class="kaart">
-          <WebinarOverview {...webinar} />
+          <WebinarOverview  {...webinar}/>
         </div>
       {/each}
     </div>
@@ -21,7 +24,7 @@
   <section>
     <h2>Contourings</h2>
     <div class="carrousel">
-      {#each data.contourings as contouring}
+      {#each newestContourings as contouring}
         <div class="contouringkaart">
           <ContouringOverview {...contouring} />
         </div>
