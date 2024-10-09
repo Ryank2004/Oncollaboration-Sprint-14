@@ -16,7 +16,7 @@
       }
 }
 
-    @media (min-width: 1920px) {
+@media (min-width: 1920px) {
   .slot {
     margin-top: 72px;
       }
