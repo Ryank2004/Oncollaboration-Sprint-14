@@ -31,11 +31,15 @@
   article {
     margin-inline: .5rem;
     max-width: var(--card-max-width);
+    height: 100%;
   }
 
   article a {
     color: var(--text-color);
     text-decoration: none;
+    display: grid;
+    grid-template-rows: max-content max-content 1fr max-content;
+    height: 100%;
   }
 
   article p {
@@ -48,7 +52,7 @@
 
   article .container-image img {
     width: 100%;
-    height: 80%;
+    height: 100%;
     object-fit: contain;
     border-radius: var(--border-radius-big);
   }
@@ -90,6 +94,7 @@
 
   article .categories {
     display: flex;
+    margin-top: auto;
   }
 
   article .categories .category {

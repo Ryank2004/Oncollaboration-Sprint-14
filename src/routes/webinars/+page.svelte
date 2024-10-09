@@ -10,11 +10,13 @@
 
   <Filter />
 
-  <div>
+  <ul>
     {#each data.webinars as webinar}
-    <WebinarOverview {...webinar}/>
+    <li>
+      <WebinarOverview {...webinar}/>
+    </li>
     {/each}
-  </div>
+  </ul>
 </main>
 
 <style>
@@ -22,8 +24,10 @@
     width: 100vw;
   }
 
-  div {
+  ul {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 2em;
+    margin-left: auto;
   }
 </style>
