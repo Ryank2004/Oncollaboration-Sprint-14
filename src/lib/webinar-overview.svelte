@@ -3,25 +3,25 @@
   export let thumbnail = "";
   export let duration = "";
   export let title = "";
-  export let speakers = ["Prof. R.P. (Rob) Coppes, PhD", "William Breen, MD"];
-  export let categories = ["Lung", "Head & Neck"];
+  export let speakers = [];
+  export let categories = [];
 </script>
 
 <article>
-  <a href="/webinar/{slug}">
+  <a href="/webinars/{slug}">
     <div class="container-image">
-      <img src="https://fdnd-agency.directus.app/assets/{thumbnail}" alt="thumbnail">
+      <img src="https://fdnd-agency.directus.app/assets/{thumbnail.id}" alt="thumbnail">
       <p class="duration">{duration}</p>
     </div>
     <h3>{title}</h3>
-    <div class="speakers">
+    <p class="speakers">
       {#each speakers as speaker}
-        <p class="speaker">{speaker}</p>
+        <span>{speaker.avl_speakers_id.fullname}</span>
       {/each} 
-    </div>
+    </p>
     <div class="categories">
       {#each categories as category}
-        <p class="category">{category}</p>
+        <p class="category">{category.avl_categories_id.name}</p>
       {/each}  
     </div>
   </a>
@@ -31,11 +31,15 @@
   article {
     margin-inline: .5rem;
     max-width: var(--card-max-width);
+    height: 100%;
   }
 
   article a {
     color: var(--text-color);
     text-decoration: none;
+    display: grid;
+    grid-template-rows: max-content max-content 1fr max-content;
+    height: 100%;
   }
 
   article p {
@@ -48,7 +52,7 @@
 
   article .container-image img {
     width: 100%;
-    height: 80%;
+    height: 100%;
     object-fit: contain;
     border-radius: var(--border-radius-big);
   }
@@ -75,22 +79,22 @@
   }
 
   article .speakers {
-    display: flex;
-    gap: .2rem;
+    display: inline;
   }
 
-  article .speakers .speaker {
+  article .speakers span {
     text-transform: uppercase;
     color: var(--primary-color);
     margin-block: .2rem;
   }
 
-  article .speakers .speaker:not(:first-child)::before {
+  article .speakers span:not(:first-child)::before {
     content: "—";
   }
 
   article .categories {
     display: flex;
+    margin-top: auto;
   }
 
   article .categories .category {

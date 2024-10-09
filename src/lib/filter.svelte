@@ -62,10 +62,6 @@
     outline: var(--focus);
     border-radius: var(--border-radius-small);
   }
-
-  label:not(:focus-visible) {
-    outline: 0;
-  }
   
   label:has(input:checked) {
     background-color: var(--primary-color);

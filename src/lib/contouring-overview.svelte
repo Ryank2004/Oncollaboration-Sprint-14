@@ -2,27 +2,34 @@
   export let slug = "";
   export let image_scan = "";
   export let title = "";
+<<<<<<< HEAD:src/lib/countouring-overview.svelte
   export let user = ["Sergio Eijben"];
   export let categories = "";  
+=======
+  export let user_id = "";
+  export let categories = [];  
+>>>>>>> origin/main:src/lib/contouring-overview.svelte
 </script>
 
-<article class="contouring-card">
+<article>
   <a href="/contourings/{slug}">
-    <div class="main-image">
-      <img src="https://fdnd-agency.directus.app/assets/{image_scan}" alt="#" width="384" height="384" />
-      <span>{categories}</span>
+    <div>
+      <img src="https://fdnd-agency.directus.app/assets/{image_scan.id}" alt="CT-Scans" width="384" height="384" />
+      {#each categories as category}
+        <span>{category.avl_categories_id.name}</span>
+      {/each} 
     </div>
     <h3>{title}</h3>
-    <p>{user}</p>
+    <p>{user_id.fullname}</p>
   </a>
 </article>
 
 <style>
-  .contouring-card {
+  article {
     max-width: var(--card-max-width);
   }
 
-  .main-image {
+  div {
     position: relative;
     width: 100%;
   }

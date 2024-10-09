@@ -1,48 +1,34 @@
 <script>
-  import ContouringOverview from "$lib/countouring-overview.svelte";
-  import WebinarCard from "$lib/webinar-card.svelte";
-  import Search from "$lib/search.svelte";
-
-  export let data; 
+  import { ContouringOverview, Search, WebinarOverview } from "$lib/index.js";
+  export let data;
 </script>
 
-<main>  
-    <h1>OVERVIEW</h1>
-    <Search />
-    <section>
-      <h2>Webinars</h2>
-      <div class="carrousel">
-        {#each data.webinars as webinar}
-          <div class="kaart">
-            <WebinarCard 
-              slug = {webinar.slug}
-              thumbnail = {webinar.thumbnail}
-              duration = {webinar.duration}
-              title = {webinar.title}
-              speakers = {webinar.speakers}
-              categories = {webinar.categories} />
-          </div>
-        {/each}
-      </div>
-      <a href="/webinars">SEE MORE</a>
-    </section>
+<main>
+  <h1>Home</h1>
+  <Search />
+  <section>
+    <h2>Webinars</h2>
+    <div class="carrousel">
+      {#each data.webinars as webinar}
+        <div class="kaart">
+          <WebinarOverview {...webinar} />
+        </div>
+      {/each}
+    </div>
+    <a href="/webinars">SEE ALL WEBINARS</a>
+  </section>
 
-    <section>
-      <h2>Contourings</h2>
-      <div class="carrousel">
-        {#each data.contourings as contouring}
-          <div class="contouringkaart">
-        <ContouringOverview
-          slug = {contouring.slug}
-          image_scan = {contouring.image_scan}
-          title = {contouring.title}
-          user = {contouring.user}
-          categories = {contouring.categories} />
-          </div>
-        {/each} 
-      </div> 
-      <a class="margin" href="/contourings">SEE MORE</a>  
-    </section>
+  <section>
+    <h2>Contourings</h2>
+    <div class="carrousel">
+      {#each data.contourings as contouring}
+        <div class="contouringkaart">
+          <ContouringOverview {...contouring} />
+        </div>
+      {/each}
+    </div>
+    <a class="margin" href="/contourings">SEE ALL CONTOURINGS</a>
+  </section>
 </main>
 
 <style>
@@ -58,23 +44,19 @@
 
   h2 {
     font-size: var(--font-size-2);
-    margin-bottom: .8em;
-  }
-
-  section {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 0.5em;
+    margin-top: 0.8em;
   }
 
   a {
+    display: inline-flex;
     color: white;
     background-color: var(--primary-color);
     font-size: var(--font-size-0);
     font-weight: 700;
-    padding: 5px 43px;
+    padding: 5px 20px;
     border-radius: 5px;
-    margin-left: auto;
-    margin-bottom: 1em;
+    margin: 1em 0;
   }
 
   .margin {
@@ -97,10 +79,6 @@
     border-radius: var(--border-radius-small);
   }
 
-  .kaart:not(:focus-visible) {
-    outline: 0;
-  }
-
   .kaart {
     flex: 0 0 calc(100% - 20%);
     scroll-snap-align: start;
@@ -120,15 +98,11 @@
     border-radius: var(--border-radius-small);
   }
 
-  .contouringkaart:not(:focus-visible) {
-    outline: 0;
-  }
-
- .carrousel::-webkit-scrollbar {
+  .carrousel::-webkit-scrollbar {
     display: none;
   }
 
-  @media screen and (min-width: 500px){
+  @media screen and (min-width: 500px) {
     .kaart {
       flex: 0 0 auto;
     }
@@ -138,7 +112,7 @@
     }
   }
 
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 600px) {
     h1 {
       font-size: var(--font-size-6);
     }
@@ -152,7 +126,7 @@
     }
   }
 
-  @media screen and (min-width: 1000px){
+  @media screen and (min-width: 1000px) {
     .carrousel {
       margin: 0;
     }
