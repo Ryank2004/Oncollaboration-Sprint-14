@@ -1,6 +1,5 @@
 <script>
   import {ContouringOverview, Search, WebinarOverview} from "$lib/index.js";
-
   export let data; 
 </script>
 
