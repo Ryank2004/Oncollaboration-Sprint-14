@@ -2,13 +2,8 @@
   export let slug = "";
   export let image_scan = "";
   export let title = "";
-<<<<<<< HEAD:src/lib/countouring-overview.svelte
-  export let user = ["Sergio Eijben"];
-  export let categories = "";  
-=======
   export let user_id = "";
   export let categories = [];  
->>>>>>> origin/main:src/lib/contouring-overview.svelte
 </script>
 
 <article>
